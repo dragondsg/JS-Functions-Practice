@@ -9,7 +9,9 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-const splitFirstAndLastNames = (str) => {return str.split(' ');}
+const splitFirstAndLastNames = (str) => {
+	return str.split(' ');
+}
 
 
 /** =========================
@@ -18,7 +20,9 @@ const splitFirstAndLastNames = (str) => {return str.split(' ');}
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-const personAge = (personObject) => {return personObject.age;}
+const personAge = (personObject) => {
+	return personObject.age;
+}
 
 
 /** =========================
@@ -28,7 +32,9 @@ const personAge = (personObject) => {return personObject.age;}
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-const isNameInArray = (arr, name) => {return arr.includes(name);}
+const isNameInArray = (arr, name) => {
+	return arr.includes(name);
+}
 
 
 /** =========================
@@ -38,6 +44,18 @@ const isNameInArray = (arr, name) => {return arr.includes(name);}
  * !!! Hint: There are two functions to refactor !!!
  */
 
+function logTimer(maxInc) {
+	let inc = 0;
+	const countTimer = setInterval(function() {
+		console.log(i);
+		i++;
+		if(inc == maxInc) {
+			clearInterval(countTimer);
+		}
+	}, 1000);
+}
+
+//Original Code.
 const logSecondsUpToMax = (max) => {
   let i = 0;
   const timer = setInterval(function() {
@@ -48,8 +66,6 @@ const logSecondsUpToMax = (max) => {
     }
   }, 1000);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
